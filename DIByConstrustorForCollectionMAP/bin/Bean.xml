@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="answer0" class="com.spring.Answer">
+		<constructor-arg value="21" type="int"></constructor-arg>
+		<constructor-arg value="this is not correct" type="String"></constructor-arg>
+</bean>
+
+<bean id="answer1" class="com.spring.Answer">
+		<constructor-arg value="22" type="int"></constructor-arg>
+		<constructor-arg value="this is good" type="String"></constructor-arg>
+</bean>
+
+	<bean id="Question0" class="com.spring.Question">
+		<constructor-arg value="20" type="int"></constructor-arg>
+		<constructor-arg value="is this correct name ?" type="String"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="answer0"/>
+				<ref bean="answer1"/>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>  

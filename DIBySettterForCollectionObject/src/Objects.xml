@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="objectbean0" class="spring.Objects">
+		<property name="fruits">
+			<list>
+				<value>Mango</value>
+				<value>Apple</value>
+				<value>Banana</value>
+			</list>
+		</property>
+		<property name="crickters">
+			<set>
+				<value>Sachine</value>
+				<value>Virat</value>
+				<value>Dhoni</value>
+			</set>
+		</property>
+		<property name="countrycapitals">
+			<map>
+				<entry key="India" value="Delhi"></entry>
+				<entry key="Pakistan" value="Karachi"></entry>
+			</map>
+		</property>
+		<property name="fruitprices">
+			<list>
+				<ref bean="fruitspircesbean0"></ref>
+				<ref bean="fruitspircesbean1"></ref>
+				<ref bean="fruitspircesbean2"></ref>
+			</list>
+		</property>
+		<property name="cricktervalues">
+			<set>
+				<ref bean="cricktersvaluebean0" />
+				<ref bean="cricktersvaluebean1" />
+				<ref bean="cricktersvaluebean2" />
+			</set>
+		</property>
+		<property name="distances">
+			<map>
+				<entry key-ref="countrycapitalsdistancebean0" value-ref="countrydistance0"></entry>
+				<entry key-ref="countrycapitalsdistancebean1" value-ref="countrydistance1"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>  
